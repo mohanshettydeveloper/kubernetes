@@ -1,6 +1,6 @@
-Installing services in minikube
-Make sure the docker is installed and docker desktop is also good. Enable Kubernetes
-in docker desktop
+#Installing services in minikube
+Make sure the docker is installed and docker desktop is also good. 
+Enable Kubernetes in docker desktop.
 Creating docker image
 mvn clean package - create a jar file
 Create a Dockerfile in root of the project directory
@@ -8,10 +8,10 @@ docker build -t employee-image -f ./Dockerfile .
 You can test the image with docker run -p 8080:8080 employee-image
 Localhost:8080/list to test the image is running fine and all good
 
-#### Start minikube
+### Start minikube
 minikube start
 
-#### Set docker env
+### Set docker env
 eval $(minikube docker-env)             # for unix shells
 minikube docker-env | Invoke-Expression # for PowerShell
 
